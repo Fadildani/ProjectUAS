@@ -11,17 +11,89 @@ import javax.swing.JOptionPane;
  * @author dwiaj
  */
 public class Panel3 extends javax.swing.JFrame {
+    Panel4 panel4;
+    //Variable menu makanan
+    String menu1 = "Nasi putih";
+    String menu2 = "Telur Goreng";
+    String menu3 = "Ayam Goreng";
+    String menu4 = "Nasi Goreng";
+    String menu5 = "Sayur Capcay";
+    String menu6 = "Sayur Bayam";
+ 
+    String JPanel1;
+    String JButton1;
+    String JButton2;
+    String JButton3;
+    String JButton4;
+    String JButton5;
+    String Jbutton6;
+    String JButton7;
+    String JButton8;
+    String JButton9;
+    String JButton10;
+    String JButton11;
+    String JButton12;
+    String Jbutton13;
+    String JButton14;
+    String JButton15;
+    String JButton16;
+    String JButton17;
+    //Variable total jumlah makanan yang di "Add".
+    int tkalori1;
+    int tkalori2;
+    int tkalori3;
+    int tkalori4;
+    int tkalori5;
+    int tkalori6;
+    
+    int JLabel1;
+    int JLabel2;
+    int JLabel3;
+    int JLabel4;
+    int JLabel5;
+    int JLabel6;
+    int JLabel7;
+    int JLabel8;
+    int JLabel9;
+    int JLabel10;
+    int JLabel11;
+    int JLabel12;
+    int JLabel13;
+    int JLabel14;
+    int JLabel15;
+    int JLabel16;
+    int JLabel17;
+    //Kalori makanan dalam 1 porsi
+    int nasi = 204;
+    int telur = 90;
+    int ayam = 284;
+    int nasgor = 250;
+    int capcay = 120;
+    int bayam = 86;
+    int kalori = 0;
+    //Variable jumlah makanan yang di "Add"
+    int count1 = 0;
+    int count2 = 0;
+    int count3 = 0;
+    int count4 = 0;
+    int count5 = 0;
+    int count6 = 0;
+    
 
     /**
      * Creates new form Panel3
      */
     public Panel3() {
         initComponents();
+        panel4 = new Panel4();
     }
-    
-    public Panel3(String _username){
+     public Panel3(Panel4 panel4){
         initComponents();
-        haloUsername.setText( "HELLO " + _username + "!!");
+        
+    }
+     public Panel3(String _username){
+        initComponents();
+        haloUsername.setText( "Halo, " + _username + " !!");
     }
 
     /**
@@ -34,14 +106,42 @@ public class Panel3 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        btnReset = new javax.swing.JButton();
+        deskKalori6 = new javax.swing.JTextField();
+        deskKalori5 = new javax.swing.JTextField();
+        deskKalori4 = new javax.swing.JTextField();
+        deskKalori3 = new javax.swing.JTextField();
+        deskKalori2 = new javax.swing.JTextField();
+        deskKalori1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        btnaddto6 = new javax.swing.JButton();
+        btnaddto5 = new javax.swing.JButton();
+        btnaddto4 = new javax.swing.JButton();
+        btnaddto3 = new javax.swing.JButton();
+        btnaddto2 = new javax.swing.JButton();
+        btnaddto1 = new javax.swing.JButton();
+        btnCek = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
+        countBayam = new javax.swing.JLabel();
+        countCapcay = new javax.swing.JLabel();
+        countNasgor = new javax.swing.JLabel();
+        countAyam = new javax.swing.JLabel();
+        countTelur = new javax.swing.JLabel();
+        countNasi = new javax.swing.JLabel();
+        btnBayam = new javax.swing.JButton();
+        btnCapcay = new javax.swing.JButton();
+        btnNasgor = new javax.swing.JButton();
+        btnAyam = new javax.swing.JButton();
+        btnTelur = new javax.swing.JButton();
+        btnNasi = new javax.swing.JButton();
+        kaloriTextField = new javax.swing.JTextField();
+        btnTotalKalori = new javax.swing.JButton();
+        imageBayam = new javax.swing.JLabel();
+        imageCapcay = new javax.swing.JLabel();
+        imageNasgor = new javax.swing.JLabel();
+        imageAyam = new javax.swing.JLabel();
+        imageTelur = new javax.swing.JLabel();
+        imageNasi = new javax.swing.JLabel();
         haloUsername = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -50,29 +150,187 @@ public class Panel3 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel9.setText("jLabel9");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
+        btnReset.setText("Reset");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 600, 70, -1));
+        jPanel1.add(deskKalori6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 290, -1));
+        jPanel1.add(deskKalori5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, 290, -1));
+        jPanel1.add(deskKalori4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 290, -1));
+        jPanel1.add(deskKalori3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 290, -1));
+        jPanel1.add(deskKalori2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 290, -1));
+        jPanel1.add(deskKalori1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 290, -1));
 
-        jLabel8.setText("jLabel8");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 16)); // NOI18N
+        jLabel2.setText("Cek Deskripsi Kalori Kamu !");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, -1, -1));
 
-        jLabel7.setText("jLabel7");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, -1, -1));
+        btnaddto6.setText("+");
+        btnaddto6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddto6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnaddto6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, -1, -1));
 
-        jLabel6.setText("jLabel6");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+        btnaddto5.setText("+");
+        btnaddto5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddto5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnaddto5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, -1, -1));
 
-        jLabel5.setText("jLabel5");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, -1, -1));
+        btnaddto4.setText("+");
+        btnaddto4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddto4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnaddto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, -1, -1));
 
-        jLabel4.setText("jLabel4");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, -1, -1));
+        btnaddto3.setText("+");
+        btnaddto3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddto3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnaddto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
 
-        jLabel3.setText("jLabel3");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
+        btnaddto2.setText("+");
+        btnaddto2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddto2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnaddto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, -1, -1));
 
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
+        btnaddto1.setText("+");
+        btnaddto1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaddto1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnaddto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
+
+        btnCek.setText("Cek");
+        btnCek.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCekActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnCek, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 600, 60, -1));
+
+        btnExit.setForeground(new java.awt.Color(255, 255, 255));
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectuas/FolderGambar/exit.png"))); // NOI18N
+        btnExit.setBorder(null);
+        btnExit.setBorderPainted(false);
+        btnExit.setContentAreaFilled(false);
+        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, -1, -1));
+
+        countBayam.setText("0");
+        jPanel1.add(countBayam, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, -1, -1));
+
+        countCapcay.setText("0");
+        jPanel1.add(countCapcay, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
+
+        countNasgor.setText("0");
+        jPanel1.add(countNasgor, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, -1, -1));
+
+        countAyam.setText("0");
+        jPanel1.add(countAyam, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, -1, -1));
+
+        countTelur.setText("0");
+        jPanel1.add(countTelur, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, -1, -1));
+
+        countNasi.setText("0");
+        jPanel1.add(countNasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, -1));
+
+        btnBayam.setText("Add");
+        btnBayam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBayamActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBayam, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 60, -1));
+
+        btnCapcay.setText("Add");
+        btnCapcay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCapcayActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnCapcay, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 310, 60, -1));
+
+        btnNasgor.setText("Add");
+        btnNasgor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNasgorActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnNasgor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 60, -1));
+
+        btnAyam.setText("Add");
+        btnAyam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAyamActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnAyam, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 220, 60, -1));
+
+        btnTelur.setText("Add");
+        btnTelur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTelurActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnTelur, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 60, -1));
+
+        btnNasi.setText("Add");
+        btnNasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNasiActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnNasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 60, -1));
+
+        kaloriTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel1.add(kaloriTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 200, -1));
+
+        btnTotalKalori.setText("Calory per meal");
+        btnTotalKalori.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTotalKaloriActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnTotalKalori, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, -1, -1));
+
+        imageBayam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectuas/FolderGambar/Sayur Bayam.png"))); // NOI18N
+        jPanel1.add(imageBayam, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, -1, -1));
+
+        imageCapcay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectuas/FolderGambar/Sayur capcay.png"))); // NOI18N
+        jPanel1.add(imageCapcay, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
+
+        imageNasgor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectuas/FolderGambar/Nasi goreng.png"))); // NOI18N
+        jPanel1.add(imageNasgor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
+
+        imageAyam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectuas/FolderGambar/Ayam goreng.png"))); // NOI18N
+        jPanel1.add(imageAyam, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
+
+        imageTelur.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectuas/FolderGambar/telur.png"))); // NOI18N
+        jPanel1.add(imageTelur, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, -1, -1));
+
+        imageNasi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectuas/FolderGambar/Nasi_putih__1_-removebg-preview.png"))); // NOI18N
+        jPanel1.add(imageNasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
 
         haloUsername.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectuas/FolderGambar/logo akun (1) (2).png"))); // NOI18N
         haloUsername.setText("Halo ,");
@@ -104,6 +362,213 @@ public class Panel3 extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_haloUsernameComponentShown
+
+    private void btnNasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNasiActionPerformed
+        // TODO add your handling code here:
+        count1++;
+        kalori += nasi;
+        countNasi.setText(count1 + "");
+        
+    }//GEN-LAST:event_btnNasiActionPerformed
+
+    private void btnTelurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelurActionPerformed
+        // TODO add your handling code here:
+        count2++;
+        kalori += telur;
+        countTelur.setText(count2 + "");
+    }//GEN-LAST:event_btnTelurActionPerformed
+
+    private void btnAyamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyamActionPerformed
+        // TODO add your handling code here:
+        count3++;
+        kalori += ayam;
+        countAyam.setText(count3 + "");
+    }//GEN-LAST:event_btnAyamActionPerformed
+
+    private void btnNasgorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNasgorActionPerformed
+        // TODO add your handling code here:
+        count4++;
+        kalori += nasgor;
+        countNasgor.setText(count4 + "");
+    }//GEN-LAST:event_btnNasgorActionPerformed
+
+    private void btnCapcayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapcayActionPerformed
+        // TODO add your handling code here:
+        count5++;
+        kalori += capcay;
+        countCapcay.setText(count5 + "");
+    }//GEN-LAST:event_btnCapcayActionPerformed
+
+    private void btnBayamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBayamActionPerformed
+        // TODO add your handling code here:
+        count6++;
+        kalori += bayam;
+        countBayam.setText(count6 + "");
+    }//GEN-LAST:event_btnBayamActionPerformed
+
+    private void btnTotalKaloriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTotalKaloriActionPerformed
+        // TODO add your handling code here:
+        kaloriTextField.setText("Total Kalori = " + kalori);
+        
+        if (kalori > 600)
+        {
+            JOptionPane.showMessageDialog(null, "Kalori kamu terlalu banyak untuk sekali makan !!", "Kurangi porsi kamu!", JOptionPane.OK_OPTION);
+            kaloriTextField.setText("");
+            kalori = 0;
+            count1 = 0;
+            count2 = 0;
+            count3 = 0;
+            count4 = 0;
+            count5 = 0;
+            count6 = 0;
+            countBayam.setText(count6 + "");
+            countCapcay.setText(count5 + "");
+            countNasgor.setText(count4 + "");
+            countAyam.setText(count3 + "");
+            countTelur.setText(count2 + "");
+            countNasi.setText(count1 + "");
+            deskKalori1.setText(" ");
+            deskKalori2.setText(" ");
+            deskKalori3.setText(" ");   
+            deskKalori4.setText(" ");
+            deskKalori5.setText(" ");
+            deskKalori6.setText(" ");
+        }else {
+            JOptionPane.showConfirmDialog(null,"Selamaat Makaannn !!", "Kalorinya Cukup Untuk Kamu",JOptionPane.PLAIN_MESSAGE);
+            //kaloriTextField.setText("");
+            //kalori = 0;
+            //count1 = 0;
+            //count2 = 0;
+            //count3 = 0;
+            //count4 = 0;
+            //count5 = 0;
+            //count6 = 0;
+            //countBayam.setText(count6 + "");
+            //countCapcay.setText(count5 + "");
+            //countNasgor.setText(count4 + "");
+            //countAyam.setText(count3 + "");
+            //countTelur.setText(count2 + "");
+            //countNasi.setText(count1 + "");
+        }
+    }//GEN-LAST:event_btnTotalKaloriActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    private void btnCekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCekActionPerformed
+        // TODO add your handling code here:
+        if(count1 != 0){
+            tkalori1 = count1 * nasi;
+            deskKalori1.setText("Kalori " + count1 + " porsi Nasi = " + tkalori1);
+            
+        }
+        if (count2 != 0){
+            tkalori2 = count2 * telur;
+            deskKalori2.setText("Kalori " + count2 + " porsi Telur = " + tkalori2);
+            
+        }
+        if (count3 != 0){
+            tkalori3 = count3 * ayam;
+            deskKalori3.setText("Kalori " + count3 + " porsi Ayam = " + tkalori3);
+        }
+        if (count4 != 0){
+            tkalori4 = count4 * nasgor;
+            deskKalori4.setText("Kalori " + count4 + " porsi Nasi Goreng = " + tkalori4);
+        }
+        if (count5 != 0){
+            tkalori5 = count5 * capcay;
+            deskKalori5.setText("Kalori " + count5 + " porsi Capcay = " + tkalori5);
+        }
+        if (count6 != 0){
+            tkalori6 = count6 * bayam;
+            deskKalori6.setText("Kalori " + count6 + " porsi Bayam = " + tkalori6);
+        }
+       // Panel4 pn4 = new Panel4();
+         //   pn4.setLocationRelativeTo(null);
+           // pn4.setVisible(true);
+            //this.setVisible(false);
+    }//GEN-LAST:event_btnCekActionPerformed
+
+    private void btnaddto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto1ActionPerformed
+        // TODO add your handling code here:
+        tkalori1 = count1 * nasi;
+         if(count1 != 0){
+            panel4.menu.add(menu1);
+            panel4.total.add(tkalori1);
+        }
+        
+    }//GEN-LAST:event_btnaddto1ActionPerformed
+
+    private void btnaddto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto2ActionPerformed
+        // TODO add your handling code here:
+        tkalori2 = count2 * telur;
+        if(count2 != 0){
+            panel4.menu.add(menu2);
+            panel4.total.add(tkalori2);
+        }
+    }//GEN-LAST:event_btnaddto2ActionPerformed
+
+    private void btnaddto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto3ActionPerformed
+        // TODO add your handling code here:
+        tkalori3 = count3 * ayam;
+        if(count3 != 0){
+            panel4.menu.add(menu3);
+            panel4.total.add(tkalori3);
+        }
+    }//GEN-LAST:event_btnaddto3ActionPerformed
+
+    private void btnaddto4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto4ActionPerformed
+        // TODO add your handling code here:
+        tkalori4 = count4 * nasgor;
+        if(count4 != 0){
+            panel4.menu.add(menu4);
+            panel4.total.add(tkalori4);
+        }
+    }//GEN-LAST:event_btnaddto4ActionPerformed
+
+    private void btnaddto5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto5ActionPerformed
+        // TODO add your handling code here:
+        tkalori5 = count5 * capcay;
+        if(count5 != 0){
+            panel4.menu.add(menu5);
+            panel4.total.add(tkalori5);
+        }
+    }//GEN-LAST:event_btnaddto5ActionPerformed
+
+    private void btnaddto6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto6ActionPerformed
+        // TODO add your handling code here:
+        tkalori6 = count6 * bayam;
+        if(count6 != 0){
+            panel4.menu.add(menu6);
+            panel4.total.add(tkalori6);
+        }
+    }//GEN-LAST:event_btnaddto6ActionPerformed
+
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+        // TODO add your handling code here:
+            deskKalori1.setText(" ");
+            deskKalori2.setText(" ");
+            deskKalori3.setText(" ");   
+            deskKalori4.setText(" ");
+            deskKalori5.setText(" ");
+            deskKalori6.setText(" ");
+            kaloriTextField.setText("");
+            kalori = 0;
+            count1 = 0;
+            count2 = 0;
+            count3 = 0;
+            count4 = 0;
+            count5 = 0;
+            count6 = 0;
+            countBayam.setText(count6 + "");
+            countCapcay.setText(count5 + "");
+            countNasgor.setText(count4 + "");
+            countAyam.setText(count3 + "");
+            countTelur.setText(count2 + "");
+            countNasi.setText(count1 + "");
+    }//GEN-LAST:event_btnResetActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,16 +606,44 @@ public class Panel3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAyam;
+    private javax.swing.JButton btnBayam;
+    private javax.swing.JButton btnCapcay;
+    private javax.swing.JButton btnCek;
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnNasgor;
+    private javax.swing.JButton btnNasi;
+    private javax.swing.JButton btnReset;
+    private javax.swing.JButton btnTelur;
+    private javax.swing.JButton btnTotalKalori;
+    private javax.swing.JButton btnaddto1;
+    private javax.swing.JButton btnaddto2;
+    private javax.swing.JButton btnaddto3;
+    private javax.swing.JButton btnaddto4;
+    private javax.swing.JButton btnaddto5;
+    private javax.swing.JButton btnaddto6;
+    private javax.swing.JLabel countAyam;
+    private javax.swing.JLabel countBayam;
+    private javax.swing.JLabel countCapcay;
+    private javax.swing.JLabel countNasgor;
+    private javax.swing.JLabel countNasi;
+    private javax.swing.JLabel countTelur;
+    private javax.swing.JTextField deskKalori1;
+    private javax.swing.JTextField deskKalori2;
+    private javax.swing.JTextField deskKalori3;
+    private javax.swing.JTextField deskKalori4;
+    private javax.swing.JTextField deskKalori5;
+    private javax.swing.JTextField deskKalori6;
     private javax.swing.JLabel haloUsername;
+    private javax.swing.JLabel imageAyam;
+    private javax.swing.JLabel imageBayam;
+    private javax.swing.JLabel imageCapcay;
+    private javax.swing.JLabel imageNasgor;
+    private javax.swing.JLabel imageNasi;
+    private javax.swing.JLabel imageTelur;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField kaloriTextField;
     // End of variables declaration//GEN-END:variables
 }

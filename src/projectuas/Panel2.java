@@ -4,6 +4,9 @@
  */
 package projectuas;
 
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
 /**
  *
  * @author dwiaj
@@ -13,6 +16,13 @@ public class Panel2 extends javax.swing.JFrame {
     /**
      * Creates new form Panel2
      */
+
+    String username = "fadil";
+
+    /** public static int getABORT() {
+        return ABORT;
+    } **/
+    
     public Panel2() {
         initComponents();
     }
@@ -27,9 +37,9 @@ public class Panel2 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        buttonEnterPanel2 = new javax.swing.JButton();
+        buttonEnter = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        namaTextFieldPanel2 = new javax.swing.JTextField();
+        usernameTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -37,21 +47,49 @@ public class Panel2 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonEnterPanel2.setText("Enter");
-        getContentPane().add(buttonEnterPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 100, -1));
+        buttonEnter.setText("Enter");
+        buttonEnter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEnterActionPerformed(evt);
+            }
+        });
+        getContentPane().add(buttonEnter, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 100, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
         jLabel1.setText("Type your name here !!");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
-        namaTextFieldPanel2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        getContentPane().add(namaTextFieldPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 180, 30));
+        usernameTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        usernameTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameTextFieldActionPerformed(evt);
+            }
+        });
+        getContentPane().add(usernameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 180, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectuas/FolderGambar/panel2 new size.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void usernameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTextFieldActionPerformed
+             // TODO add your handling code here:
+       /** Scanner in = new Scanner(System.in);
+        String nama = in.next(); **/
+    }//GEN-LAST:event_usernameTextFieldActionPerformed
+
+    private void buttonEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEnterActionPerformed
+        // TODO add your handling code here:
+        
+        String _username = usernameTextField.getText();
+        
+            Panel3 pn = new Panel3(_username);
+            pn.setLocationRelativeTo(null);
+            pn.setVisible(true);
+            this.setVisible(false);           
+        
+    }//GEN-LAST:event_buttonEnterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -83,16 +121,19 @@ public class Panel2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Panel2().setVisible(true);
+                Panel2 pl = new Panel2 ();
+                pl.setLocationRelativeTo(null);
+                pl.setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonEnterPanel2;
+    private javax.swing.JButton buttonEnter;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField namaTextFieldPanel2;
+    private javax.swing.JTextField usernameTextField;
     // End of variables declaration//GEN-END:variables
 }
