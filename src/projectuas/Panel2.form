@@ -35,7 +35,7 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="buttonEnter">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Enter"/>
+        <Property name="text" type="java.lang.String" value="Masuk"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonEnterActionPerformed"/>

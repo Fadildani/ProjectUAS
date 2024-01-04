@@ -47,7 +47,7 @@ public class Panel2 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonEnter.setText("Enter");
+        buttonEnter.setText("Masuk");
         buttonEnter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonEnterActionPerformed(evt);
@@ -81,14 +81,16 @@ public class Panel2 extends javax.swing.JFrame {
 
     private void buttonEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEnterActionPerformed
         // TODO add your handling code here:
+        if (usernameTextField.getText().equals("")){
         
-        String _username = usernameTextField.getText();
-        
+        JOptionPane.showMessageDialog(null, "Masukkan nama kamu dahulu !", "Tidak bisa masuk !", JOptionPane.OK_OPTION);
+        }else {
+            String _username = usernameTextField.getText();
             Panel3 pn = new Panel3(_username);
             pn.setLocationRelativeTo(null);
             pn.setVisible(true);
             this.setVisible(false);           
-        
+        }
     }//GEN-LAST:event_buttonEnterActionPerformed
 
     /**

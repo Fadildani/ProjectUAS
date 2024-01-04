@@ -106,6 +106,7 @@ public class Panel3 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        btnBack = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
         deskKalori6 = new javax.swing.JTextField();
         deskKalori5 = new javax.swing.JTextField();
@@ -114,12 +115,6 @@ public class Panel3 extends javax.swing.JFrame {
         deskKalori2 = new javax.swing.JTextField();
         deskKalori1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        btnaddto6 = new javax.swing.JButton();
-        btnaddto5 = new javax.swing.JButton();
-        btnaddto4 = new javax.swing.JButton();
-        btnaddto3 = new javax.swing.JButton();
-        btnaddto2 = new javax.swing.JButton();
-        btnaddto1 = new javax.swing.JButton();
         btnCek = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
         countBayam = new javax.swing.JLabel();
@@ -150,6 +145,16 @@ public class Panel3 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectuas/FolderGambar/btnBack (2).png"))); // NOI18N
+        btnBack.setBorderPainted(false);
+        btnBack.setContentAreaFilled(false);
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 70, 30));
+
         btnReset.setText("Reset");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,54 +172,6 @@ public class Panel3 extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 16)); // NOI18N
         jLabel2.setText("Cek Deskripsi Kalori Kamu !");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, -1, -1));
-
-        btnaddto6.setText("+");
-        btnaddto6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddto6ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnaddto6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, -1, -1));
-
-        btnaddto5.setText("+");
-        btnaddto5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddto5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnaddto5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, -1, -1));
-
-        btnaddto4.setText("+");
-        btnaddto4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddto4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnaddto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, -1, -1));
-
-        btnaddto3.setText("+");
-        btnaddto3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddto3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnaddto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, -1, -1));
-
-        btnaddto2.setText("+");
-        btnaddto2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddto2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnaddto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, -1, -1));
-
-        btnaddto1.setText("+");
-        btnaddto1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddto1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnaddto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
 
         btnCek.setText("Cek");
         btnCek.addActionListener(new java.awt.event.ActionListener() {
@@ -348,7 +305,7 @@ public class Panel3 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -407,9 +364,9 @@ public class Panel3 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBayamActionPerformed
 
     private void btnTotalKaloriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTotalKaloriActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: 
         kaloriTextField.setText("Total Kalori = " + kalori);
-        
+ 
         if (kalori > 600)
         {
             JOptionPane.showMessageDialog(null, "Kalori kamu terlalu banyak untuk sekali makan !!", "Kurangi porsi kamu!", JOptionPane.OK_OPTION);
@@ -434,7 +391,8 @@ public class Panel3 extends javax.swing.JFrame {
             deskKalori5.setText(" ");
             deskKalori6.setText(" ");
         }else {
-            JOptionPane.showConfirmDialog(null,"Selamaat Makaannn !!", "Kalorinya Cukup Untuk Kamu",JOptionPane.PLAIN_MESSAGE);
+            if (kalori == 0){
+            //JOptionPane.showConfirmDialog(null,"Selamaat Makaannn !!", "Kalorinya Cukup Untuk Kamu",JOptionPane.PLAIN_MESSAGE);
             //kaloriTextField.setText("");
             //kalori = 0;
             //count1 = 0;
@@ -449,7 +407,16 @@ public class Panel3 extends javax.swing.JFrame {
             //countAyam.setText(count3 + "");
             //countTelur.setText(count2 + "");
             //countNasi.setText(count1 + "");
+            }else {
+                JOptionPane.showConfirmDialog(null,"Selamaat Makaannn !!", "Kalorinya Cukup Untuk Kamu",JOptionPane.PLAIN_MESSAGE);
+            }
+            
         }
+        
+        
+        
+        
+      
     }//GEN-LAST:event_btnTotalKaloriActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
@@ -491,61 +458,6 @@ public class Panel3 extends javax.swing.JFrame {
             //this.setVisible(false);
     }//GEN-LAST:event_btnCekActionPerformed
 
-    private void btnaddto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto1ActionPerformed
-        // TODO add your handling code here:
-        tkalori1 = count1 * nasi;
-         if(count1 != 0){
-            panel4.menu.add(menu1);
-            panel4.total.add(tkalori1);
-        }
-        
-    }//GEN-LAST:event_btnaddto1ActionPerformed
-
-    private void btnaddto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto2ActionPerformed
-        // TODO add your handling code here:
-        tkalori2 = count2 * telur;
-        if(count2 != 0){
-            panel4.menu.add(menu2);
-            panel4.total.add(tkalori2);
-        }
-    }//GEN-LAST:event_btnaddto2ActionPerformed
-
-    private void btnaddto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto3ActionPerformed
-        // TODO add your handling code here:
-        tkalori3 = count3 * ayam;
-        if(count3 != 0){
-            panel4.menu.add(menu3);
-            panel4.total.add(tkalori3);
-        }
-    }//GEN-LAST:event_btnaddto3ActionPerformed
-
-    private void btnaddto4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto4ActionPerformed
-        // TODO add your handling code here:
-        tkalori4 = count4 * nasgor;
-        if(count4 != 0){
-            panel4.menu.add(menu4);
-            panel4.total.add(tkalori4);
-        }
-    }//GEN-LAST:event_btnaddto4ActionPerformed
-
-    private void btnaddto5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto5ActionPerformed
-        // TODO add your handling code here:
-        tkalori5 = count5 * capcay;
-        if(count5 != 0){
-            panel4.menu.add(menu5);
-            panel4.total.add(tkalori5);
-        }
-    }//GEN-LAST:event_btnaddto5ActionPerformed
-
-    private void btnaddto6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddto6ActionPerformed
-        // TODO add your handling code here:
-        tkalori6 = count6 * bayam;
-        if(count6 != 0){
-            panel4.menu.add(menu6);
-            panel4.total.add(tkalori6);
-        }
-    }//GEN-LAST:event_btnaddto6ActionPerformed
-
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
             deskKalori1.setText(" ");
@@ -569,6 +481,14 @@ public class Panel3 extends javax.swing.JFrame {
             countTelur.setText(count2 + "");
             countNasi.setText(count1 + "");
     }//GEN-LAST:event_btnResetActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        Panel2 pn2 = new Panel2();
+        pn2.setLocationRelativeTo(null);
+        pn2.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -607,6 +527,7 @@ public class Panel3 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAyam;
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnBayam;
     private javax.swing.JButton btnCapcay;
     private javax.swing.JButton btnCek;
@@ -616,12 +537,6 @@ public class Panel3 extends javax.swing.JFrame {
     private javax.swing.JButton btnReset;
     private javax.swing.JButton btnTelur;
     private javax.swing.JButton btnTotalKalori;
-    private javax.swing.JButton btnaddto1;
-    private javax.swing.JButton btnaddto2;
-    private javax.swing.JButton btnaddto3;
-    private javax.swing.JButton btnaddto4;
-    private javax.swing.JButton btnaddto5;
-    private javax.swing.JButton btnaddto6;
     private javax.swing.JLabel countAyam;
     private javax.swing.JLabel countBayam;
     private javax.swing.JLabel countCapcay;
